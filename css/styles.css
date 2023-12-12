@@ -1,0 +1,417 @@
+/********** Template CSS **********/
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=DM+Serif+Display:ital@0;1&family=Dancing+Script:wght@400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root {
+    
+    --secondary: #a3c18d;
+    --light: #F5F5F5;
+    --dark: #333;
+    font-family: 'poppins', sans-serif;
+    color: #739f54;
+}
+
+.fw-medium {
+    font-weight: 600 !important;
+}
+
+.fw-semi-bold {
+    font-weight: 700 !important;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*** Button ***/
+.btn {
+    font-family: 'poppins', sans-serif;
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn.btn-primary,
+.btn.btn-secondary {
+    color: #FFFFFF;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 0px;
+}
+
+
+
+
+/*** Hero Header ***/
+.hero-header {
+    background: linear-gradient(rgba(20, 20, 31, .7), rgba(20, 20, 31, .7)), url(../img/bg-hero.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, .5);
+}
+
+
+/*** Section Title ***/
+.section-title {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    
+}
+
+.section-title::before {
+    position: absolute;
+    content: "";
+    width: calc(100% + 80px);
+    height: 2px;
+    top: 4px;
+    left: -40px;
+    background: var(--primary);
+    z-index: -1;
+}
+
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: calc(100% + 120px);
+    height: 2px;
+    bottom: 5px;
+    left: -60px;
+    background: var(--primary);
+    z-index: -1;
+}
+
+.section-title.text-start::before {
+    width: calc(100% + 40px);
+    left: 0;
+}
+
+.section-title.text-start::after {
+    width: calc(100% + 60px);
+    left: 0;
+}
+
+
+/*** Service ***/
+.service-item {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    transition: .5s;
+}
+
+.service-item:hover {
+    background: var(--primary);
+}
+
+.service-item * {
+    transition: .5s;
+}
+
+.service-item:hover * {
+    color: var(--light) !important;
+}
+
+
+/*** Booking ***/
+.booking {
+    background: linear-gradient(rgba(15, 23, 43, .7), rgba(15, 23, 43, .7)), url(../img/visionnn.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed !important; 
+    
+}
+
+
+/*** Team ***/
+.team-item {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+}
+
+.team-item img {
+    transition: .5s;
+}
+
+.team-item:hover img {
+    transform: scale(1.1);
+}
+
+.team-item .btn {
+    background: #FFFFFF;
+    color: var(--primary);
+    border-radius: 20px;
+    border-bottom: 1px solid var(--primary);
+}
+
+.team-item .btn:hover {
+    background: var(--primary);
+    color: #FFFFFF;
+}
+
+
+/*** Testimonial ***/
+.testimonial-carousel::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+}
+
+.testimonial-carousel::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+}
+
+@media (min-width: 768px) {
+    .testimonial-carousel::before,
+    .testimonial-carousel::after {
+        width: 200px;
+    }
+}
+
+@media (min-width: 992px) {
+    .testimonial-carousel::before,
+    .testimonial-carousel::after {
+        width: 300px;
+    }
+}
+
+.testimonial-carousel .owl-item .testimonial-item,
+.testimonial-carousel .owl-item.center .testimonial-item * {
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-item {
+    background: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-item * {
+    color: #FFFFFF !important;
+}
+
+.testimonial-carousel .owl-dots {
+    margin-top: 24px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.testimonial-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #CCCCCC;
+    border-radius: 15px;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-dot.active {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+
+/*Service part*/
+.service-part{background: linear-gradient(rgba(15, 23, 43, .7), rgba(15, 23, 43, .7)), url(../img/facts.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed !important; 
+    background-size: cover;padding: 100px;}
+    
+.service-part .service-detail{margin-left: 10px;}
+.service-part .head-five{font-size: 16px;margin-bottom: 0;color:#fff;}
+.service-part .service-span{font-size:35px;font-weight: 700;font-family: 'Roboto Slab';color:#fff;}
+.service-part .service-info a{text-decoration: none;}
+/*End*/
+        /* ==========================================================================
+   7.0 Campaigns Section
+   ========================================================================== */
+.campaigns-section{
+	background-image: url(../img/vision.jpg);
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: center center;
+	-webkit-background-size: cover;
+	background-size: cover;
+    padding: 150px 0;
+    height: 800px;
+}
+.campaigns-wrap h4{
+    background-color: #739f54;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "poppins", sans-serif;
+}
+.campaigns-wrap h2{
+    color: #fff;
+    font-size: 42px;
+}
+.campaigns-wrap p{
+    color: #ddd;
+    margin-bottom: 30px;
+}
+.campaigns-wrap .progress{
+    width: 100%;
+    height: 10px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+    overflow: inherit;
+    margin-bottom: 40px;
+}
+.campaigns-wrap .progress .progress-bar{
+    background-color: #739f54;
+    position: relative;
+    border-radius: 30px;
+}
+.campaigns-wrap .progress .progress-bar span{
+    position: absolute;
+    display: block;
+    background-color: #739f54;
+    right: -2px;
+    top: -10px;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: 12px;
+}
+.campaigns-wrap .progress .progress-bar span:before{
+    width: 50px;
+    height: 50px;
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    border-radius: 50%;
+    border: 10px solid #739f54;
+}
+
+.campaigns-wrap .donation-box h3{
+    display: inline-block;
+    color: #fff;
+    margin-right: 30px;
+    font-weight: 500;
+    font-size: 18px;
+}
+.campaigns-wrap .donation-box{
+    margin-bottom: 25px;
+}
+
+/*Video Style*/
+.video-wrap{
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.video-wrap video{
+    width: 100%;
+}
+.video-wrap .play{
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+}
+.video-wrap .play a{
+    color: #fff;
+    display: inline-block;
+    background-color: transparent;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    text-align: center;
+}
+.video-wrap .play:hover{
+    background-color: rgba(0, 0, 0, 0);
+    transition: all 0.2s ease-in-out;
+}
+
+/* ===============================================
+campaigns-wrap p
+
+/*Aboutus-page*/
+.about-part.padno{padding-top: 90px;}
+.aboutus-banner{background: url(../image/aboutus-banner.jpg)no-repeat;text-align: center;background-position: center;background-size: cover;}
+.aboutus-part .title-head-two{font-size: 45px;color: #111;font-weight: 800;font-family: 'Roboto Slab';}
+.aboutus-part .title-head-two span{color:#10cb7f;}
+.aboutus-part .title-head-three{font-size: 20px;color:#10cb7f;font-weight: 700;font-family: 'Roboto Slab';margin: 25px 0;}
+.aboutus-part .desc-p{font-size: 14px;color:#999;line-height: 25px;}
+.about-service{background-color:#eee;}
+.about-service .about-serv-detail{background-color: #fff;padding: 30px 25px;margin: 15px 0;}
+.about-service .about-serv-detail .ser-title{font-size: 18px;font-weight: 700;font-family: 'Roboto Slab';color:#212322;margin-bottom: 10px;margin-top: 7px;}
+.about-service .about-serv-detail .ser-p{color:#999;font-size: 14px;margin-bottom: 0;}
+/*End*/
+
+
+
+
