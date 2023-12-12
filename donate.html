@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    
+    <title>Kids of Hope Foundation</title>
+</head>
+<style>
+       /* Commen style start */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --themeRed: #739f54;
+    --green: #739f54;
+}
+
+button,
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+
+p {
+    font-size: 14px;
+    line-height: 26px; /* Hauteur de ligne */
+}
+
+.fullContainer {
+    width: 100%;
+}
+
+.container {
+    width: 1140px;
+    margin: auto; /* marge automatique pour centrer horizontalement */
+}
+
+.sectionTitle {
+    width: 300px;
+    border-bottom: 3px solid var(--themeRed);
+    /* Applique un alignement horizontal centré au texte à l'intérieur de cet élément */
+    text-align: center;
+    font-size: 40px;
+    font-weight: 400;
+    margin: 0 auto 50px;
+    position: relative;
+    padding: 10px;
+    /* Transforme le texte à l'intérieur de cet élément en lettres majuscules */
+    text-transform: uppercase;
+    font-family: 'poppins';
+}
+
+.sectionTitle::after {
+    display: inline-block;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-color: var(--themeRed);
+
+
+    /* Positionne l'élément de manière à ce que son bord gauche soit centré à 50% de la largeur du conteneur parent,
+   puis décale l'élément de 10 pixels vers la gauche */
+    position: absolute;
+    left: calc(50% - 10px);
+    top: calc(75% - 7px);
+
+
+    /* Applique une rotation de 45 degrés à l'élément,
+   puis le translate de 50% de sa propre largeur horizontalement
+   et de 50% de sa propre hauteur verticalement */
+    transform: rotate(45deg) translate(50%, 50%);
+
+    border: 3px solid #fff;
+}
+
+section {
+    padding: 100px 0;
+    position: relative;
+}
+
+
+/* Commen style end */
+
+
+
+
+/*DonateSection start*/
+
+#DonateSection .cards {
+    display: flex; /* Active le modèle de mise en page flexible */
+    flex-wrap: wrap; /* Autorise le passage à la ligne des éléments flexibles si l'espace est insuffisant sur une seule ligne */
+    justify-content: space-between;
+    margin-top: 50px;
+    gap: 20px;
+}
+
+#DonateSection .cards>div {
+    flex: 1 1 350px;
+    background-color: #e2e2e2;
+    padding: 35px;
+    color: #000;
+    text-align: center;
+    border-radius: 5px;
+    height: 215px;
+    border: 1px solid #ccc;
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow:
+        0px 0px 2.7px rgba(0, 0, 0, 0.022),
+        0px 0px 6.9px rgba(0, 0, 0, 0.031),
+        0px 0px 14.2px rgba(0, 0, 0, 0.039),
+        0px 0px 29.2px rgba(0, 0, 0, 0.048),
+        0px 0px 80px rgba(0, 0, 0, 0.07);
+}
+
+#DonateSection .cards>div:hover {
+    transform: scale(1.08);
+    border-color: var(--green);
+}
+
+#DonateSection .cards>div .title {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#DonateSection .cards>div p {
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+#DonateSection .cards>div button {
+    border: 1px solid var(--green);
+    outline: none;
+    padding: 7px 15px;
+    margin-top: 15px;
+    font-size: 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#DonateSection .cards>div:hover button {
+    background-color: var(--green);
+    color: #fff;
+}
+
+/*DonateSection end*/
+
+
+/* donation form start */
+section.donation_form {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+section.donation_form .donation_image,
+section.donation_form #donationForm {
+
+    flex: 1;
+}
+
+
+
+section.donation_form .donation_image  {
+    background: url('./imgs/adorable-little-girl-combed-with-pigtails-outdoors.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+#donationForm.contrainer {
+flex-basis: 300px;
+    padding: 2%;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow:
+        0px 0px 2.7px rgba(0, 0, 0, 0.022),
+        0px 0px 6.9px rgba(0, 0, 0, 0.031),
+        0px 0px 14.2px rgba(0, 0, 0, 0.039),
+        0px 0px 29.2px rgba(0, 0, 0, 0.048),
+        0px 0px 80px rgba(0, 0, 0, 0.07);
+}
+
+#donationForm.contrainer p:first-child {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.time {
+    margin-top: 3%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 4%;
+    background-color: var(--themeRed);
+    border-radius: 10px;
+}
+
+.time span:first-child {
+    padding: 4%;
+    padding-left: 30%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.time span {
+    padding-left: 25%;
+    cursor: pointer;
+
+}
+
+p:nth-child(3) {
+    margin-top: 5%;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.value {
+    width: 100%;
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.money {
+    border: 2px solid #f5f1f1;
+    border-radius: 7px;
+    font-weight: 600;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.money:hover,
+.money.active {
+    background-color: black;
+    color: white;
+
+}
+
+.confirm {
+    margin-top: 5%;
+}
+
+.input {
+    margin-top: 5%;
+}
+
+#donationForm input[type="text"] {
+    margin-top: 2%;
+    width: 100%;
+    padding: 15px 10px;
+    padding-left: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+p:nth-child(7) {
+    margin-top: 10px;
+    color: var(--green);
+}
+
+#donationForm button {
+    width: 100%;
+    margin-top: 5%;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    background-color: black;
+    border: none;
+    padding: 15px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#donationForm button:hover {
+    color: var(--themeRed);
+}
+
+p:nth-child(9) {
+    margin-top: 10%;
+}
+
+.green {
+    color: var(--green);
+    text-decoration: underline;
+}
+
+
+
+
+
+/* programs Section start*/
+.programs {
+    background-color: #e2e2e2;
+}
+
+.programs .boxContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.programs .boxContainer .box {
+    background-color: #fff;
+    text-align: center;
+    padding-bottom: 25px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px 0 #c5c5c5;
+    position: relative;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    width: 270px;
+}
+
+.programs .boxContainer .box .cardImage {
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+}
+
+.programs .boxContainer .box .cardImage::after {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    filter: grayscale(100%);
+    transition: 0.4s;
+}
+
+.programs .boxContainer .box:nth-child(1) .cardImage,
+.programs .boxContainer .box:nth-child(1) .cardImage::after {
+    background-image: url("./imgs/little-boy-outdoors-smiling.jpg");
+}
+
+.programs .boxContainer .box:nth-child(2) .cardImage,
+.programs .boxContainer .box:nth-child(2) .cardImage::after {
+    background-image: url("./imgs/portrait-cute-child-looking-camera-with-innocence-generated-by-artificial-intelligence.jpg");
+}
+
+.programs .boxContainer .box:nth-child(3) .cardImage,
+.programs .boxContainer .box:nth-child(3) .cardImage::after {
+    background-image: url("./imgs/close-up-kid-nature.jpg");
+}
+
+.programs .boxContainer .box:nth-child(4) .cardImage,
+.programs .boxContainer .box:nth-child(4) .cardImage::after {
+    background-image: url("./imgs/portrait-little-homeless-boy.jpg");
+}
+
+.programs .boxContainer .box:hover .cardImage::after {
+    top: 100%;
+}
+
+.programs .boxContainer .box .programsTitle {
+    font-size: 16px;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #444;
+}
+
+.programs .boxContainer .box .donationCount {
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.programs .boxContainer .box .donationCount span {
+    color: var(--themeRed);
+}
+
+.programs .boxContainer .box button {
+    position: absolute;
+    left: 50%;
+    background-color: var(--green);
+    color: #fff;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    outline: none;
+    border: 1px solid #e2e2e2;
+    border-radius: 30px;
+    width: 150px;
+    
+}
+
+
+/* programs Section end*/
+
+/* Join Section start from here*/
+
+.join {
+    background-image: linear-gradient(to right,rgba(0,0,0,0.6),rgba(0,0,0,0.7)),url("./images/8.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+.join .joinTitle {
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.join .joinTitle span {
+    font-weight: 800;
+}
+
+.join button {
+    padding: 7px 15px;
+    margin-top: 20px;
+    border: 0;
+    outline: none;
+    font-weight: 600;
+    font-size: 16px;
+    width: 200px;
+    box-shadow: 2px 2px 10px #739f54;
+    animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+.join button.joinNow {
+    margin-right: 10px;
+    background-color: #739f54;
+    color: #fff;
+    border-radius: 30px;
+    width: 200px;
+    box-shadow: 2px 2px 10px #739f54;
+    animation: heartbeat 1.5s ease-in-out infinite both;
+}
+.join button.joinNow:hover{
+  background-color: #8cc067 ;
+}
+.join button.adoptBtn {
+    background-color: #739f54;
+    color: #fff;
+    border-radius: 30px;
+    animation: heartbeat 1.5s ease-in-out infinite both;
+}
+@keyframes heartbeat {
+  from {
+    transform: scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
+  }
+  17% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+  }
+  33% {
+    transform: scale(0.87);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}
+.join button.adoptBtn:hover{
+  background-color: #8cc067;
+}
+
+/* Join Section end from here*/
+
+/* responsive code start from here */
+@media screen and (max-width: 1140px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .banner h1 {
+        margin-top: 200px;
+    }
+
+    #DonateSection .cards {
+        justify-content: space-around;
+        height: auto;
+    }
+
+    #DonateSection .cards>div {
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .banner {
+        background-position-x: 45%;
+    }
+
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+
+    .programs .boxContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+  
+    #DonateSection .cards>div:hover {
+        width: 350px;
+    }
+
+}
+
+
+@media screen and (max-width: 425px) {
+
+    #DonateSection p {
+        text-align: justify;
+    }
+
+    #DonateSection .cards>div:hover {
+        width: 400px;
+        margin-top: 10px;
+        padding: 35px;
+    }
+
+    .programs .boxContainer {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* responsive code end here */
+  .contact-image {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(./images/card-1.jpg);
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  margin-bottom: 20px;
+  
+}
+.contact-image button{
+  border: none;
+  background-color: #8cc067;
+  box-shadow: 1px 2px 2px #8cc067;
+  width: 200px;
+  height: 50px;
+  color: #fff;
+  font-size: 18px;
+  font-family: 'poppins';
+  position: absolute;
+  top: 375px;
+  left: 20px;
+}
+
+.contact-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'poppins';
+}
+.contact-text h1{
+  color: #f5f5f5;
+  
+}
+.contact-text p{
+  font-family: 'poppins';
+
+} 
+</style>
+<body>
+  <!--Navbar-->    
+  <div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+      <div class="nav-logo">
+        <img src="./images/logo.png" alt="logo" width="180" height="120">
+      </div>
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">&#9776;</label>
+    </div>
+    
+    <div class="nav-links">
+      <a href="index.html" target="_self" >Home</a>
+      <a href="about.html" target="_self" class="active" >About us</a>
+      <a href="News.html" target="_self" >Newsletters</a>
+      <a href="contact.html" target="_self" >Contact</a>
+      <a href="donate.html" target="_self" >Donate</a>
+      <a href="Subscribe.html" target="_self">Sign Up</a>
+      <a href="login.html">Login<i class="fa-regular fa-user ms-2 mt-1" style="color: #739f54;"></i></a>
+    </div>
+  </div>
+    
+<!--End Navbar-->
+  <div class="contact-image">
+    <div class="contact-text">
+      <h1 style="font-size:50px">Donate Today to save GAZA's children</h1>
+    </div>
+    <a href="index.html"><button>Home > Donate</button></a>
+  </div>
+<!-- Navbar & Hero End -->
+      
+        <!--homeSection end here-->
+
+
+    <section class="fullContainer" id="DonateSection">
+      <div class="container">
+        <h2 class="sectionTitle">Donation</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Blanditiis nostrum illo veritatis eum officia ipsa aperiam consequatur ipsum sint, 
+        recusandae quas tempora mollitia magnam, officiis voluptas! Dicta temporibus maiores explicabo!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque magnam eos illum expedita, 
+        exercitationem aliquid omnis at? Et, quibusdam beatae deserunt aliquam sint inventore sequi ullam esse. 
+        Aliquam, quaerat tenetur.</p>
+        <div class="cards">
+          <div class="donationBox">
+              <div class="title">Give Donation</div>
+              <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+              <button>
+                  Donate Now 
+              </button>
+          </div>
+          <!--Donation Box end-->
+          <div class="volunteerBox">
+              <div class="title">Become a volunteer</div>
+              <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+              <button>
+                  Become Now
+              </button>
+          </div>
+          <!--Donation Box end-->
+          <div class="scholarshipBox">
+              <div class="title">Give ScholarShip</div>
+              <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+              <button>
+                  Give Immediately
+              </button>
+          </div>
+          <!--Donation Box end-->
+
+
+
+
+        </div>
+      </div>
+    </section>
+    <!--.donateSection end here-->
+
+
+   <!-- donation form section start -->
+  
+
+    <section class="donation_form">
+      <div class="donation_image">
+          <!-- <img src="./adorable-little-girl-combed-with-pigtails-outdoors.jpg" alt=""> -->
+      </div>
+
+      <div class="contrainer" id="donationForm">
+          <p><b>Select gift frequency</b></p>
+          <div class="time">
+              <span>Monthly</span>
+              <span>Onetime</span>
+          </div>
+         
+          <p><b>Select amount</b></p>
+          <div class="value">
+              <span class="money">250MAD</span>
+              <span class="money active">400MAD</span>
+              <span class="money">500MAD</span>
+              <span class="money">650MAD</span>
+              <span class="money">800MAD</span>
+          </div>
+        <div class="confirm">
+          <input type="checkbox" name="" id="">
+          <span>Yes'll generously add 20MAD each month to cover the transaction.</span>
+        </div>
+      
+        <div class="input">
+          <p><b>Name</b></p>
+          <input type="text" name="" id="" placeholder="Enter your name" required>
+      
+          <p><b>Email</b></p>
+          <input type="text" name="" id="" placeholder="Enter your email" required>
+        </div>
+          <p>Make a Donation to Save children in confilct</p>
+          <button>Donate now</button>
+      
+      
+          <p>By donating, you agree to our <span class="green">terms of service </span> and <span class="green">privacy policy</span></p>
+        </div> 
+
+    </section>
+
+
+   <!-- donation form section end -->
+
+
+    <section class="programs" id="programsSection">
+      <div class="container">
+          <h2 class="sectionTitle">Programs</h2>
+          <div class="boxContainer">
+              <div class="box">
+                  <div class="cardImage"></div>
+                  <div class="programsTitle">Education to every child</div>
+                  <div class="donationCount">
+                      Donation Goal : <span>1800MAD</span>
+                  </div>
+                  <button>Donate Now</button>
+              </div>
+              <!--box end-->
+              <div class="box">
+                  <div class="cardImage"></div>
+                  <div class="programsTitle">Make life easier for them</div>
+                  <div class="donationCount">
+                      Donation Goal : <span>950MAD</span>
+                  </div>
+                  <button>Donate Now</button>
+              </div>
+              <!--box end-->
+              <div class="box">
+                  <div class="cardImage"></div>
+                  <div class="programsTitle">Dedicating to help children</div>
+                  <div class="donationCount">
+                      Donation Goal : <span>1070MAD</span>
+                  </div>
+                  <button>Donate Now</button>
+              </div>
+              <!--box end-->
+              <div class="box">
+                  <div class="cardImage"></div>
+                  <div class="programsTitle">Clean Water for people</div>
+                  <div class="donationCount">
+                      Donation Goal : <span>560MAD</span>
+                  </div>
+                  <button>Donate Now</button>
+              </div>
+              <!--box end-->
+          </div>
+          <!--boxContainer end-->
+      </div>
+    </section>
+    <!--programsSection end here-->
+
+    <section class="join" id="joinSection">
+      <div class="container">
+          <div class="joinTitle">
+              DONATE TODAY & <span>SAVE MORE LIVES</span>
+          </div>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Quidem ipsa modi sunt sequi distinctio dolores impedit itaque, 
+          ipsam eos possimus quod delectus perferendis dicta exercitationem? 
+          Itaque nisi sapiente rerum facilis.</p>
+          <a href="contact.html"><button class="joinNow">JOIN US</button></a>
+          <a href="donate.html"><button class="adoptBtn">Donate Now</button></a>
+      </div>
+  </section>
+  <!--join Section end here-->
+  <footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <img src="./images/logo.png" alt="...">
+            <p>
+              At Kids Of Kids Foundation, we stand united in our commitment to bring hope, healing, and positive change to the lives of children affected by conflict.
+              Together, we envision a world where every child's future is safeguarded and empowered. 
+              Join us in this transformative journey.
+            </p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <div class="footer-links">
+                <a href="About us.html">About Us</a><br>
+                <a href="News.html">Newsletters</a><br>
+                <a href="donate.html">Donate Today</a><br>
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+        <div class="footer-section">
+          <h3>Services</h3>
+          <div class="footer-links">
+              <a href="index.html">Our Foundation</a><br>
+              <a href="donate.html">Donation</a><br>
+              <a href="#">Privacy Policy</a><br>
+              <a href="#">Terms of privacy</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3>Connect With Us</h3>
+            <ul>
+              <li><a href="#"><i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-youtube" style="color: #ffffff;"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-google" style="color: #ffffff;"></i></a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 kids of hope Foundation All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>        
+    <script>
+     const headerEl=document.querySelector('.nav');
+       window.addEventListener('scroll',()=>{
+         if(window.scrollY>50){
+         headerEl.classList.add('nav-scrolled');
+       }
+       else if(window.scrollY<=50){
+         headerEl.classList.remove('nav-scrolled');
+       }
+     });
+    </script>
+</body>
+</html>

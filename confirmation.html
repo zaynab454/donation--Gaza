@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation</title>
+    <style>
+        body {
+         background-attachment: fixed;
+         background-position: center;
+         background-size: cover;
+         font-family: 'Hind', sans-serif;
+         background: url(images/bkkkk.jpg) no-repeat 0px 0px;
+	     background-size:cover;
+        }
+
+        h2 {
+            text-align: center;
+            color: #fff;
+            margin-top: 0;
+            font-size: 40px;
+            
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            
+            overflow: hidden;
+            box-shadow: 0 0 20px rgb(0, 0, 0);
+        }
+
+        th, td {
+            padding: 15px;
+            background-color: rgba(8, 8, 8, 0.628);
+            color: #f1ebeb;
+        }
+
+        th {
+            text-align: left;
+            background-color: rgb(21, 18, 18);
+            color: #dededf;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.868);
+        }
+
+        tr:hover {
+            background-color: #476433;
+        }
+    </style>
+</head>
+<body>
+    <h2>User Information</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody id="userInfoTable"></tbody>
+    </table>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Récupérer toutes les informations du stockage local
+            const allData = JSON.parse(localStorage.getItem('userData')) || [];
+
+            // Afficher chaque ensemble d'informations dans le tableau
+            const userInfoTable = document.getElementById('userInfoTable');
+            allData.forEach(data => {
+                const newRow = userInfoTable.insertRow(-1);
+                for (const key in data) {
+                    const cellValue = newRow.insertCell(-1);
+                    cellValue.innerText = data[key];
+                }
+            });
+        });
+    </script>
+</body>
+</html>
